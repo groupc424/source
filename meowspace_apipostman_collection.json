@@ -1,0 +1,208 @@
+{
+	"info": {
+		"name": "InstaPet API",
+		"_postman_id": "3cb5cefe-1d4a-7896-49f7-3d94db5dbe84",
+		"description": "Backend api for instapet web application. The instagram for your pets",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"isurunix@gmail.com\",\n  \"password\": \"inspet\"\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/user/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"login"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"rockvys@gmail.com\",\n  \"password\": \"rocky\",\n  \"name\": \"rocky vyas\",\n  \"bio\": \"Hackerman\"\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/user/signup",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"signup"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Create Post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "postImage",
+							"description": "",
+							"type": "file",
+							"src": "ff.png"
+						},
+						{
+							"key": "caption",
+							"value": "This is a sample caption",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/user/dGVzdDJAZG9tYWluLmNvbQ==/post",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"dGVzdDJAZG9tYWluLmNvbQ==",
+						"post"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get all posts from a user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "localhost:3000/user/dGVzdDJAZG9tYWluLmNvbQ==/post",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"dGVzdDJAZG9tYWluLmNvbQ==",
+						"post"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get all posts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "localhost:3000/post",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"post"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Like a post",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"userId\": \"aXN1cnVuaXhAZ21haWwuY29t\"\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/post/273feee0-cd18-11e7-835e-114741ca47a3/like",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"post",
+						"273feee0-cd18-11e7-835e-114741ca47a3",
+						"like"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Add comment to a post",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"userId\":\"dGVzdDJAZG9tYWluLmNvbQ==\",\n\t\"comment\":\"Sample comment\"\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/post/273feee0-cd18-11e7-835e-114741ca47a3/comment",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"post",
+						"273feee0-cd18-11e7-835e-114741ca47a3",
+						"comment"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
