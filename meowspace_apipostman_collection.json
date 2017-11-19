@@ -18,7 +18,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"email\": \"isurunix@gmail.com\",\n  \"password\": \"inspet\"\n}"
+					"raw": "{\n  \"email\": \"rockvys@gmail.com\",\n  \"password\": \"inspet\"\n}"
 				},
 				"url": {
 					"raw": "localhost:3000/user/login",
