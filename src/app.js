@@ -6,10 +6,16 @@ var mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 
 //set your mongodb database
-mongoose.connect('mongodb://localhost/meowspace',{useMongoClient: true});
+mongoose.connect('mongodb://localhost/data',{useMongoClient: true});
+//swrich to meowspace if needed
+//mongodb://localhost/data/db/
+
+
+//Mongoclient.db = connect("localhost:27017/mydb");
 
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
+
 
 
 //require routes
